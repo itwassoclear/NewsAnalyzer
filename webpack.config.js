@@ -40,8 +40,8 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              publicPath: 'img',
-              outputPath: 'img',
+              publicPath: './img',
+              outputPath: './img',
               useRelativePath: true,
               esModule: false,
             }
@@ -60,8 +60,8 @@ module.exports = {
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin({ // 
-      filename: './pages/[name].[contenthash].css',
+    new MiniCssExtractPlugin({ 
+      filename: './[name].[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,

@@ -6,7 +6,7 @@
   <meta name="description" content="Сервис для анализа происходящих в мире событий">
   <meta name="author" content="Мария Котлярова">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css%>">
-  <link rel="icon" href="<%=require('./images/Favicon.svg')%>">
+  <link rel="icon" href="<%=require('./img/Favicon.svg')%>">
   <title>NewsAnalyzer</title>
 </head>
 <body class="body">
@@ -17,12 +17,12 @@
       <header class="header">
         <nav class="header__nav">
           <a href="./index.html" class="header__logo">NewsAnalyzer</a>
-          <ul class="navigation">
-            <li class="navigation__li">
-              <a href="./index.html" class="navigation__link navigation__link_active">Главная</a>
+          <ul class="header__links">
+            <li class="header__links-list">
+              <a href="./index.html" class="header__link header__link_active">Главная</a>
             </li>
-            <li class="navigation__li">
-              <a href="./about.html" class="navigation__link">О проекте</a>
+            <li class="header__links-list">
+              <a href="./about.html" class="header__link">О проекте</a>
             </li>
           </ul>
         </nav>
@@ -44,12 +44,12 @@
         <section class="searching-results">
 
           <div class="preloader">
-            <img class="preloader__image" src="<%=require('./images/Ellipse.png')%>" alt="Загрузка">
+            <img class="preloader__image" src="<%=require('./img/Ellipse.png')%>" alt="Загрузка">
             <p class="preloader__text">Идет поиск новостей...</p>
           </div>
 
           <div class="not-found">
-            <img class="not-found__image" src="<%=require('./images/not-found.svg')%>" alt="Ничего не найдено">
+            <img class="not-found__image" src="<%=require('./img/not-found.svg')%>" alt="Ничего не найдено">
             <h3 class="not-found__title">Ничего не найдено</h3>
             <p class="not-found__text">К сожалению по вашему запросу ничего не найдено.</p>
           </div>
@@ -141,7 +141,7 @@
         </section>
 
         <section class="author">
-          <img class="author__photo" alt="Фотография автора" src="<%=require('./images/author.jpg')%>">
+          <img class="author__photo" alt="Фотография автора" src="<%=require('./img/author.jpg')%>">
           <div class="author__about">
             <h3 class="author__title">Об авторе</h3>
             <p class="author__text">

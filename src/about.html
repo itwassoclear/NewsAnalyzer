@@ -6,10 +6,31 @@
   <meta name="description" content="Сервис для анализа происходящих в мире событий">
   <meta name="author" content="Мария Котлярова">
   <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
+  <link rel="icon" href="<%=require('./img/Favicon.svg')%>">
   <title>NewsAnalyzer</title>
 </head>
-<body>
-  <h1 class="h1">About</h1>
+<body class="body">
+
+  <div class="page">
+    <header class="header">
+      <nav class="header__nav">
+        <a href="./index.html" class="header__logo">NewsAnalyzer</a>
+        <ul class="navigation">
+          <li class="navigation__li">
+            <a href="./index.html" class="navigation__link navigation__link_active">Главная</a>
+          </li>
+          <li class="navigation__li">
+            <a href="./about.html" class="navigation__link">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <main class="content">
+
+  </main>
+
 
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
