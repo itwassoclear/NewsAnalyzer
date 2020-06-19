@@ -1,6 +1,8 @@
+@import url('./_theme/_dark/header__logo_theme_dark.css');
+@import url('./_theme/_light/header__logo_theme_light.css');
+
 .header__logo {
   text-decoration: none;
-  color: #fff;
   font-family: 'Roboto Slab', 'Arial', sans-serif;
   font-style: normal;
   font-weight: bold;

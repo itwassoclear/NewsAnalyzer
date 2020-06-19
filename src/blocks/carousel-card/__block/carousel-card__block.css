@@ -1,0 +1,6 @@
+.carousel-card__block {
+  display: flex;
+  padding-top: 16px;
+  flex-wrap: wrap;
+  width: 350px;
+}

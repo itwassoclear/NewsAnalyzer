@@ -1,0 +1,58 @@
+/* кнопки */
+.flickity-button {
+  background: #000;
+  opacity: .8;
+  margin: 0;
+  padding:0;
+  width: 40px;
+  height: 40px;
+  transition: opacity .3s ease-in-out;
+  z-index: 1;
+}
+
+.flickity-button:hover {
+  opacity: 1;
+  background: #000;
+}
+
+.flickity-prev-next-button.previous {
+  top: 42%;
+  left: 24px;
+}
+
+.flickity-prev-next-button.next {
+  top: 42%;
+  right: 24px;
+}
+
+/* иконки внутри кнопок */
+.flickity-prev-next-button .flickity-button-icon {
+  fill: white;
+  width: 40%;
+  height: 40%;
+  left: 30%;
+  top: 30%;
+}
+
+/* непрозрасность слева */
+.main-carousel::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 88px;
+  height: 288px;
+  top: 0;
+  z-index: 0;
+  background: linear-gradient(-90deg, rgba(245, 246, 247, 0) 0%, #F5F6F7 100%);
+}
+
+/* непрозрачность справа */
+.flickity-viewport::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 88px;
+  height: 288px;
+  right: 0;
+  background: linear-gradient(90deg, rgba(245, 246, 247, 0) 0%, #F5F6F7 100%);
+}

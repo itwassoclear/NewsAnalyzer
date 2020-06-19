@@ -1,0 +1,28 @@
+.card__image {
+  height: 272px;
+  border-radius: 10px 10px 0 0;
+}
+
+.image-1 {
+  background-image: url('.././../../img/cards/image_08.png');
+}
+
+.image-2 {
+  background-image: url('.././../../img/cards/image_04.png');
+}
+
+.image-3 {
+  background-image: url('.././../../img/cards/image_07.png');
+}
+
+.image-4 {
+  background-image: url('.././../../img/cards/image_06.png');
+}
+
+.image-5 {
+  background-image: url('.././../../img/cards/image_01.png');
+}
+
+.image-6 {
+  background-image: url('.././../../img/cards/image_05.png');
+}

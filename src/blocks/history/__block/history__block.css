@@ -1,0 +1,5 @@
+.history__block {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 104px 64px;
+}

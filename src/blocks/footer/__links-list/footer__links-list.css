@@ -1,0 +1,7 @@
+.footer__links-list {
+  padding: 0 40px 0 0;
+}
+
+.footer__links-list:last-child {
+  padding: 0;
+}

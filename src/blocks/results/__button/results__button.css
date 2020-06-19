@@ -1,0 +1,22 @@
+.results__button {
+  color: #1A1B22;
+  background: #fff;
+  border-radius: 80px;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  align-items: center;
+  text-align: center;
+  padding: 18.14px 84px 21.86px;
+  border: none;
+  cursor: pointer;
+  max-width: 288px;
+  margin: 64px auto 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.results__button:hover {
+  background: rgba(255, 255, 255, 0.9);
+}

@@ -1,0 +1,18 @@
+@import url('./__block/carousel-card__block.css');
+@import url('./__commit/carousel-card__commit.css');
+@import url('./__data/carousel-card__data.css');
+@import url('./__about/carousel-card__about.css');
+@import url('./__mail/carousel-card__mail.css');
+@import url('./__name/carousel-card__name.css');
+@import url('./__photo/carousel-card__photo.css');
+
+.carousel-card {
+  display: flex;
+  flex-direction: column;
+  width: 352px;
+  height: 240px;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 0 16px 48px 0;
+}

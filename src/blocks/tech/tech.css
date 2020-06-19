@@ -1,0 +1,11 @@
+@import url('./__block/tech__block.css');
+@import url('./__caption/tech__caption.css');
+@import url('./__card/tech__card.css');
+@import url('./__logo/tech__logo.css');
+@import url('./__title/tech__title.css');
+
+.tech {
+  padding: 80px 104px 88px;
+  background-color: #F5F6F7;
+  display: flex;
+}
