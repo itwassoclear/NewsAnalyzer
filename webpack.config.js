@@ -14,7 +14,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    filename: './scripts/[name].[chunkhash].js'
   },
   module: {
     rules: [
@@ -28,7 +28,11 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+          isDev ? 'style-loader' : { loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../',
+            },
+          },
           'css-loader', 
           'postcss-loader'
         ]
@@ -40,7 +44,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              publicPath: './img',
+              // publicPath: './img',
               outputPath: './img',
               useRelativePath: true,
               esModule: false,
@@ -50,7 +54,7 @@ module.exports = {
             loader: 'image-webpack-loader',
             options: {
             }
-          }
+          },
         ]
       },
       {
@@ -61,7 +65,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({ 
-      filename: './[name].[contenthash].css',
+      filename: './styles/[name].[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,

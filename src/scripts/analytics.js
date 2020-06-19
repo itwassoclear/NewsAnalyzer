@@ -1,3 +1,3 @@
-import "../pages/analytics.css";
+import "../styles/analytics.css";
 
 console.log('Analytics')

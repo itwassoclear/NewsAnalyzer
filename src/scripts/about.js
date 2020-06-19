@@ -1,4 +1,4 @@
-import "../pages/about.css";
+import "../styles/about.css";
 
 console.log('About')
 
