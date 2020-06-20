@@ -20,3 +20,7 @@
 .results__button:hover {
   background: rgba(255, 255, 255, 0.9);
 }
+
+.results__button:focus {
+  outline: none;
+}

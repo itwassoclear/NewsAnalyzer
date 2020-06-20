@@ -1,0 +1,9 @@
+.analytics__string {
+  display: flex;
+  align-items: center;
+  padding-bottom: 56px;
+}
+
+.analytics__string:last-child {
+  padding: 0;
+}

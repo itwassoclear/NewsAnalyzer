@@ -1,0 +1,5 @@
+.analytics__numbers {
+  display: flex;
+  padding: 16px 0 0 104px;
+  justify-content: space-between;
+}
