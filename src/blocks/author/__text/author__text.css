@@ -9,3 +9,9 @@
   color: #1A1B22;
   max-width: 600px;
 }
+
+@media screen and (max-width: 800px) {
+  .author__text {
+    padding: 16px 0 0;
+  }
+}

@@ -18,3 +18,18 @@
 .card:hover {
   box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
 }
+
+@media screen and (max-width: 1023px) {
+  .card {
+    width: 224px;
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .card {
+    width: 288px;
+    height: 446px;
+    margin: 8px auto;
+  }
+}

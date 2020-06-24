@@ -8,4 +8,27 @@
   margin: 0;
   padding: 16px 0 0;
   max-height: 110px;
+  width: 352px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+@media screen and (max-width: 1023px) {
+  .card__text {
+    padding: 10px 0 0;
+    max-height: 88px;
+    overflow: hidden;
+    white-space: pre-line;
+    text-overflow: ellipsis;
+    width: 192px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .card__text {
+    padding: 10px 0 0;
+    max-height: 88px;
+    width: 254px;
+  }
 }

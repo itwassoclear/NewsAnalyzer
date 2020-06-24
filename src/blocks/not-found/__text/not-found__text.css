@@ -10,3 +10,10 @@
   padding-top: 16px;
   max-width: 356px;
 }
+
+@media screen and (max-width: 460px) {
+  .not-found__text {
+    font-size: 16px;
+    max-width: 320px;
+  }
+}

@@ -1,3 +1,9 @@
 .tech__card {
   margin: 0;
 }
+
+@media screen and (max-width: 600px) {
+  .tech__card {
+    padding-top: 33px;
+  }
+}

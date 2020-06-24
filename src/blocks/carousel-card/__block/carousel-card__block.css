@@ -4,3 +4,16 @@
   flex-wrap: wrap;
   width: 350px;
 }
+
+@media screen and (max-width: 800px) {
+  .carousel-card__block {
+    padding-top: 19px;
+    width: 260px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .carousel-card__block {
+    padding-top: 11px;
+  }
+}

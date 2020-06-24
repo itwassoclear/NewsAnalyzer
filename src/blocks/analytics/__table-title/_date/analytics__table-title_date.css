@@ -1,3 +1,9 @@
 .analytics__table-title_date {
   width: 104px;
 }
+
+@media screen and (max-width: 540px) {
+  .analytics__table-title_date {
+    width: 80px;
+  }
+}

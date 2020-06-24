@@ -5,3 +5,15 @@
   padding: 80px 104px 94px;
   max-width: 815px;
 }
+
+@media screen and (max-width: 800px) {
+  .client {
+    padding: 30px 40px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .client {
+    padding: 16px;
+  }
+}

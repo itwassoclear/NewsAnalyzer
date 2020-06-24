@@ -2,3 +2,9 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 670px) {
+  .results__block {
+    flex-direction: column;
+  }
+}

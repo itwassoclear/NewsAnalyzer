@@ -18,3 +18,10 @@
 		transform: rotate(360deg);
 	}
 }
+
+@media screen and (max-width: 460px) {
+  .preloader__image {
+		width: 60px;
+		height: 60px;
+  }
+}

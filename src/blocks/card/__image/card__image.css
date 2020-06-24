@@ -1,6 +1,8 @@
 .card__image {
   height: 272px;
   border-radius: 10px 10px 0 0;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .image-1 {
@@ -25,4 +27,17 @@
 
 .image-6 {
   background-image: url('.././../../img/cards/image_05.png');
+}
+
+@media screen and (max-width: 1023px) {
+  .card__image {
+    height: 150px;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .card__image {
+    height: 196px;
+  }
 }

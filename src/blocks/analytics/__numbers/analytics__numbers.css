@@ -3,3 +3,9 @@
   padding: 16px 0 0 104px;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 540px) {
+  .analytics__numbers {
+    display: none;
+  }
+}

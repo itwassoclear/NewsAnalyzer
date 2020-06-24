@@ -24,3 +24,19 @@
 .results__button:focus {
   outline: none;
 }
+
+@media screen and (max-width: 1023px) {
+  .results__button {
+    max-width: 240px;
+    padding: 15px 60px 17px;
+    margin: 16px auto 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .results__button {
+    max-width: 288px;
+    padding: 15px 84px 17px;
+    margin: 5px auto 0;
+  }
+}

@@ -1,3 +1,9 @@
 .analytics__table-title_month {
   width: 104px;
 }
+
+@media screen and (max-width: 540px) {
+  .analytics__table-title_month {
+    width: 80px;
+  }
+}

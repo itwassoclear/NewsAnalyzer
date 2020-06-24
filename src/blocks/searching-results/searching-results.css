@@ -7,3 +7,15 @@
   flex-direction: column;
   /* display: none; */
 }
+
+@media screen and (max-width: 800px) {
+  .searching-results {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .searching-results {
+    padding: 32px 16px 44px;
+  }
+}

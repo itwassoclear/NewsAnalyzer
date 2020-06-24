@@ -1,0 +1,10 @@
+.history__link-button {
+  text-decoration: none;
+  margin: 30px auto 0;
+}
+
+@media screen and (min-width: 541px) {
+  .history__link-button {
+    display: none;
+  }
+}

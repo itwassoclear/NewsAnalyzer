@@ -4,4 +4,25 @@
   max-width: 598px;
   width: 100%;
   justify-content: space-between;
+  padding-right: 96px;
+}
+
+@media screen and (max-width: 1240px) {
+  .tech__block {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .tech__block {
+    max-width: 932px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tech__block {
+    flex-wrap: wrap;
+    max-width: 290px;
+    margin: 0 auto;
+  }
 }

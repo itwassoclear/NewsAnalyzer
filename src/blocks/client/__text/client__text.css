@@ -8,3 +8,9 @@
   padding-top: 24px;
   margin: 0;
 }
+
+@media screen and (max-width: 800px) {
+  .client__text {
+    padding-top: 16px;
+  }
+}

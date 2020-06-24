@@ -3,3 +3,9 @@
   display: flex;
   padding-bottom: 13px;
 }
+
+@media screen and (max-width: 540px) {
+  .analytics__properties {
+    padding-bottom: 8px;
+  }
+}

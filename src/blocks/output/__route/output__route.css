@@ -7,3 +7,9 @@
   line-height: 24px;
   color: #8D8D91;
 }
+
+@media screen and (max-width: 460px) {
+  .output__route {
+    display: none;
+  }
+}

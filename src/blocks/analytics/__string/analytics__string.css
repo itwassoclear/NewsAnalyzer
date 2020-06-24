@@ -7,3 +7,9 @@
 .analytics__string:last-child {
   padding: 0;
 }
+
+@media screen and (max-width: 540px) {
+  .analytics__string {
+    padding-bottom: 24px;
+  }
+}
