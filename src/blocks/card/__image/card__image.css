@@ -1,43 +1,19 @@
 .card__image {
-  height: 272px;
+  width: 400px;
   border-radius: 10px 10px 0 0;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.image-1 {
-  background-image: url('.././../../img/cards/image_08.png');
-}
-
-.image-2 {
-  background-image: url('.././../../img/cards/image_04.png');
-}
-
-.image-3 {
-  background-image: url('.././../../img/cards/image_07.png');
-}
-
-.image-4 {
-  background-image: url('.././../../img/cards/image_06.png');
-}
-
-.image-5 {
-  background-image: url('.././../../img/cards/image_01.png');
-}
-
-.image-6 {
-  background-image: url('.././../../img/cards/image_05.png');
-}
-
 @media screen and (max-width: 1023px) {
   .card__image {
-    height: 150px;
+    width: 224px;
     background-size: cover;
   }
 }
 
 @media screen and (max-width: 540px) {
   .card__image {
-    height: 196px;
+    width: 288px;
   }
 }

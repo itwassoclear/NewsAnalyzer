@@ -32,7 +32,7 @@
         <h1 class="search__title">Что в мире творится?</h1>
         <p class="search__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
         <form class="search__inspect">
-          <input type="text" placeholder="Введите тему новости" class="search__input" >
+          <input type="text" placeholder="Введите тему новости" class="search__input" required minlength="2">
           <button class="search__button">Искать</button>
         </form>
       </section>
@@ -60,79 +60,79 @@
             <a href="./analytics.html" class="results__link">Посмотреть аналитику</a>
           </div>
 
-          <ul class="cards">
-            <li class="card">
+          <div class="cards">
+            <div class="card">
               <a class="card__link" href="https://lenta.ru" target="_blank">
-                <div class="card__image image-1"></div>
-                <time class="card__date">2 августа 2019</time>
+                <img src="<%=require('./img/cards/image_08.png')%>" class="card__image" alt="Изображение из статьи">
+                <time datetime="2019-08-02" class="card__date">2 августа 2019</time>
                 <div class="card__description">
                   <h3 class="card__title">Национальное достояние – парки</h3>
                   <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
                   <p class="card__label">Лента.ру</p>
                 </div>
               </a>
-            </li>
+            </div>
   
-            <li class="card">
+            <div class="card">
               <a class="card__link" href="https://meduza.io/" target="_blank">
-                <div class="card__image image-2"></div>
-                <time class="card__date">2 августа 2019</time>
+                <img src="<%=require('./img/cards/image_04.png')%>" class="card__image" alt="Изображение из статьи">
+                <time datetime="2019-08-02" class="card__date">2 августа 2019</time>
                 <div class="card__description">
                   <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
                   <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
                   <p class="card__label">Медуза</p>
                 </div>
               </a>
-            </li>
+            </div>
   
-            <li class="card">
+            <div class="card">
               <a class="card__link" href="https://ria.ru/" target="_blank">
-                <div class="card__image image-3"></div>
-                <time class="card__date">2 августа 2019</time>
+                <img src="<%=require('./img/cards/image_07.png')%>" class="card__image" alt="Изображение из статьи">
+                <time datetime="2019-08-02" class="card__date">2 августа 2019</time>
                 <div class="card__description">
                   <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
                   <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
                   <p class="card__label">Риа</p>
                 </div>
               </a>
-            </li>
+            </div>
   
-            <li class="card">
-              <a class="card__link" href="https://zen.yandex.ru/" target="_blank">
-                <div class="card__image image-4"></div>
-                <time class="card__date">2 августа 2019</time>
+            <div class="card">
+              <a class="card__link" href="https://ria.ru/" target="_blank">
+                <img src="<%=require('./img/cards/image_06.png')%>" class="card__image" alt="Изображение из статьи">
+                <time datetime="2019-08-02" class="card__date">2 августа 2019</time>
                 <div class="card__description">
                   <h3 class="card__title">Национальное достояние – парки</h3>
                   <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
                   <p class="card__label">Дзен</p>
                 </div>
               </a>
-            </li>
+            </div>
   
-            <li class="card">
+            <div class="card">
               <a class="card__link" href="https://www.afisha.ru/" target="_blank">
-                <div class="card__image image-5"></div>
-                <time class="card__date">2 августа 2019</time>
+                <img src="<%=require('./img/cards/image_01.png')%>" class="card__image" alt="Изображение из статьи">
+                <time datetime="2019-08-02" class="card__date">2 августа 2019</time>
                 <div class="card__description">
                   <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
                   <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
                   <p class="card__label">Афиша</p>
                 </div>
               </a>
-            </li>
+            </div>
   
-            <li class="card">
+            <div class="card">
               <a class="card__link" href="https://zona.media/" target="_blank">
-                <div class="card__image image-6"></div>
-                <time class="card__date">2 августа 2019</time>
+                <img src="<%=require('./img/cards/image_05.png')%>" class="card__image" alt="Изображение из статьи">
+                <time datetime="2019-08-02" class="card__date">2 августа 2019</time>
                 <div class="card__description">
                   <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
                   <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
                   <p class="card__label">Медиазона</p>
                 </div>
               </a>
-            </li>
-          </ul>
+            </div>
+          </div>
   
           <button class="results__button">Показать еще</button>
           <!-- прелоадер -->

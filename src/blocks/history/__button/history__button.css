@@ -19,7 +19,3 @@
 .history__button:hover {
   opacity: .8;
 }
-
-.history__button:focus {
-  outline: none;
-}

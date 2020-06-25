@@ -13,10 +13,16 @@
   color: #B6BCBF;
   padding: 0 0 0 24px;
   display: inline-flex;
+  transition: all .2s ease-in-out;
+}
+
+.search__input:hover {
+  box-shadow: 0 0 2px 1px #2F71E5;
 }
 
 .search__input:focus {
   outline: none;
+  box-shadow: 0 0 10px 1px #2F71E5;
 }
 
 @media screen and (max-width: 800px) {

@@ -18,11 +18,12 @@
   right: 0;
   bottom: 0;
   cursor: pointer;
-  transition: background 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .search__button:focus {
   outline: none;
+  box-shadow: 0 0 10px 1px #2F71E5;
 }
 
 .search__button:hover {
