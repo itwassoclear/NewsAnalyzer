@@ -1,0 +1,8 @@
+.header__link_theme_light {
+  color: #B6BCBF;
+  transition: color .2s ease-in-out;
+}
+
+.header__link_theme_light:hover {
+  color: #000;
+}

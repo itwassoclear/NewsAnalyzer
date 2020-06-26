@@ -1,0 +1,19 @@
+.footer__links-list {
+  padding: 0 40px 0 0;
+}
+
+.footer__links-list:last-child {
+  padding: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .footer__links-list {
+    padding: 0 25.12px 0 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer__links-list {
+    padding: 0 0 30px;
+  }
+}

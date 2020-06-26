@@ -1,0 +1,26 @@
+.card__label {
+  font-family: 'Roboto Slab', 'Arial', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+  text-transform: uppercase;
+  margin: 0;
+  position: absolute;
+  top: 216px;
+}
+
+@media screen and (max-width: 1023px) {
+  .card__label {
+    top: 194px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .card__label {
+    top: 171px;
+  }
+}

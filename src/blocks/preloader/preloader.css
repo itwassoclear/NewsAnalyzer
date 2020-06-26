@@ -1,0 +1,9 @@
+@import url('./__image/preloader__image.css');
+@import url('./__text/preloader__text.css');
+
+/* прелоадер */
+.preloader {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}

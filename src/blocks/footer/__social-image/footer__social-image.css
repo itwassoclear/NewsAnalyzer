@@ -1,0 +1,12 @@
+@import url('./_facebook/footer__social-image_facebook.css');
+@import url('./_github/footer__social-image_github.css');
+
+.footer__social-image {
+  width: 22px;
+  height: 21px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.footer__social-image:hover {
+  opacity: 0.9;
+}

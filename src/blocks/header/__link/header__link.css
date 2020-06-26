@@ -1,0 +1,26 @@
+@import url('./_theme/_dark/header__link_theme_dark.css');
+@import url('./_theme/_light/header__link_theme_light.css');
+@import url('./_active/header__link_active.css');
+
+.header__link {
+  text-decoration: none;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .headheader__linker {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header__link {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

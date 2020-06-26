@@ -1,0 +1,23 @@
+.card__date {
+  font-family: 'Source Sans Pro', 'Arial', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #B6BCBF;
+  padding: 20px 24px 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .card__date {
+    padding: 16px 16px 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .card__date {
+    padding: 15.12px 16px 0;
+  }
+}

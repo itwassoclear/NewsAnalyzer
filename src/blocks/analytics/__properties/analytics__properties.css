@@ -1,0 +1,11 @@
+.analytics__properties {
+  border-bottom: 1px solid #1A1B22;
+  display: flex;
+  padding-bottom: 13px;
+}
+
+@media screen and (max-width: 540px) {
+  .analytics__properties {
+    padding-bottom: 8px;
+  }
+}

@@ -1,0 +1,22 @@
+@import url('./_monday/analytics__counting_monday.css');
+@import url('./_tuesday/analytics__counting_tuesday.css');
+@import url('./_wednesday/analytics__counting_wednesday.css');
+@import url('./_thursday/analytics__counting_thursday.css');
+@import url('./_friday/analytics__counting_friday.css');
+@import url('./_saturday/analytics__counting_saturday.css');
+@import url('./_sunday/analytics__counting_sunday.css');
+
+.analytics__counting {
+  height: 24px;
+  background: #2F71E5;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.4px;
+  color: #fff;
+  padding-left: 6px;
+}

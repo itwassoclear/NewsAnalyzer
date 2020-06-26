@@ -1,0 +1,17 @@
+.history__block {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 104px 64px;
+}
+
+@media screen and (max-width: 800px) {
+  .history__block {
+    padding: 0 40px 32px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .history__block {
+    padding: 0 16px 16px;
+  }
+}

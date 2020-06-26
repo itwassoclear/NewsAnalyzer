@@ -1,0 +1,10 @@
+.not-found__image {
+  width: 96px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 460px) {
+  .not-found__image {
+		width: 85px;
+  }
+}

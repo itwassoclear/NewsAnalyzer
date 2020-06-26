@@ -1,0 +1,10 @@
+@import url('./_theme/_dark/header__link_active_theme_dark.css');
+@import url('./_theme/_light/header__link_active_theme_light.css');
+
+.header__link_active {
+  transition: opacity .2s ease-in-out;
+}
+
+.header__link_active:hover {
+  opacity: .8;
+}

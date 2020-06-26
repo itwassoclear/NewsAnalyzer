@@ -1,0 +1,12 @@
+.carousel-card__about {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+@media screen and (max-width: 800px) {
+  .carousel-card__about {
+    margin-left: 12px;
+    width: 200px;
+  }
+}

@@ -1,0 +1,14 @@
+@import url('./_date/analytics__table-title_date.css');
+@import url('./_month/analytics__table-title_month.css');
+
+.analytics__table-title {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+  margin: 0;
+}

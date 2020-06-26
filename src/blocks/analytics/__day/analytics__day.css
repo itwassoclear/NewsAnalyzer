@@ -1,0 +1,15 @@
+.analytics__day {
+  margin: 0;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #1A1B22;
+  min-width: 104px;
+}
+
+@media screen and (max-width: 540px) {
+  .analytics__day {
+    min-width: 80px;
+  }
+}

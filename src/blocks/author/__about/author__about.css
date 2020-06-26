@@ -1,0 +1,15 @@
+.author__about {
+  margin: 0 0 0 56px;
+}
+
+@media screen and (max-width: 800px) {
+  .author__about {
+    margin: 0 0 0 32px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .author__about {
+    margin: 24px 0 0;
+  }
+}

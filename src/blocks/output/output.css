@@ -1,0 +1,21 @@
+@import url('./__link/output__link.css');
+@import url('./__numbers/output__numbers.css');
+@import url('./__route/output__route.css');
+@import url('./__title/output__title.css');
+@import url('./__text/output__text.css');
+
+.output {
+  padding: 40px 104px 80px;
+}
+
+@media screen and (max-width: 800px) {
+  .output {
+    padding: 32px 40px 40px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .output {
+    padding: 16px 16px 24px;
+  }
+}

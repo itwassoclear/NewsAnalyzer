@@ -1,0 +1,10 @@
+.footer__social {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+  .footer__social {
+    align-items: flex-start;
+  }
+}

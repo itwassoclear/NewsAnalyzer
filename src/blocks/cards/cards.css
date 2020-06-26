@@ -1,0 +1,38 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 64px 0 0;
+  justify-content: space-between;
+  padding: 0;
+}
+
+@media screen and (max-width: 1430px) {
+  .cards {
+    max-width: 816px;
+    margin: 32px auto 0;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .cards {
+    max-width: 688px;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 899px) {
+  .cards {
+    max-width: 461px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cards {
+    max-width: 461px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .cards {
+    margin: 36.84px auto 0;
+  }
+}
