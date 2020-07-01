@@ -3,7 +3,7 @@
 
 /* прелоадер */
 .preloader {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   display: none;
 }

@@ -31,10 +31,11 @@
       <section class="search">
         <h1 class="search__title">Что в мире творится?</h1>
         <p class="search__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
-        <form class="search__inspect">
-          <input type="text" placeholder="Введите тему новости" class="search__input" required minlength="2">
-          <button class="search__button">Искать</button>
+        <form class="search__form">
+          <input type="text" placeholder="Введите тему новости" class="search__input" minlength="2" maxlength="30" required>
+          <button type="submit" class="search__button" disabled>Искать</button>
         </form>
+        <span class="search__error-message"></span>
       </section>
 
     </div>
