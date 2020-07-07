@@ -9,6 +9,9 @@
   padding: 16px 0 0;
   max-height: 110px;
   width: 352px;
+  overflow: hidden;
+  white-space: pre-line;
+  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
@@ -18,9 +21,6 @@
   .card__text {
     padding: 10px 0 0;
     max-height: 88px;
-    overflow: hidden;
-    white-space: pre-line;
-    text-overflow: ellipsis;
     width: 192px;
   }
 }

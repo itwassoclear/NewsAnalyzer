@@ -1,14 +1,10 @@
 import "./styles/index.css";
 
-const searchButton = document.querySelector('.search__button'); // кнопка Искать
-const searchingResults = document.querySelector('.searching-results'); // общий контейнер для всех результатов поиска
-const preloader = document.querySelector('.preloader'); // блок Прелоадер
-const notFound = document.querySelector('.not-found'); // блок Ничего не найдено
-const results = document.querySelector('.results'); // блок Результаты поиска
-const cards = document.querySelector('.cards'); // контейнер для карточек
-const showMore = document.querySelector('.results__button'); // кнопка Показать ещё
-
-const monthArray = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+import NewsCard from './js/components/NewsCard.js';
+import NewsCardList from './js/components/NewsCardList.js';
+import NewsApi from './js/modules/NewsApi.js';
+import DataStorage from './js/modules/DataStorage.js';
+import {searchButton, searchingResults, preloader, notFound, serverError, results, cards, inputElem, formElem, inputErrors, SERVER_URL, API_KEY} from './js/constants/constants.js';
 
 // базовый компонент
 class BaseComponent {
@@ -37,15 +33,46 @@ class Form extends BaseComponent {
   }
 }
 
-const inputElem = document.querySelector('.search__input'); // инпут
-const formElem = document.querySelector('.search__form'); // форма с поиском
-const inputErrors = document.querySelector('.search__error-message'); // ошибка валидации
+const dataStorage = new DataStorage();
 
+// коллбэк для сабмита формы
 const onSubmitCallback = (event) => {
   event.preventDefault();
-  console.log('Submit!!!')
+  localStorage.clear();
+  inputElem.setAttribute('disabled', true); // дизейблим инпут
+  searchingResults.setAttribute('style', 'display: flex'); // общий блок результатов показывается
+  notFound.setAttribute('style', 'display: none');
+  results.setAttribute('style', 'display: none');
+  preloader.setAttribute('style', 'display: flex'); // прелоадер крутится
+  newsApi.getNews(inputElem.value) // 
+    .then((data) => {
+      dataStorage.setData(data);
+      dataStorage.setRequest(inputElem.value);
+      dataStorage.setArray(data);
+      newsCardList.deleteCards();
+    })
+    .then (() => {
+      const storageCards = dataStorage.getArray();
+      if (storageCards.length != 0) {
+        results.setAttribute('style', 'display: flex');
+        newsCardList.renderCards(storageCards, newsCard);
+      } else {
+        checkRes(data.articles);
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      serverError.setAttribute('style', 'display: flex');
+      results.setAttribute('style', 'display: none');
+    })
+    .finally (() => {
+      searchButton.removeAttribute('disabled');
+      inputElem.removeAttribute('disabled');
+      preloader.setAttribute('style', 'display: none');
+    })
 }
 
+// коллбэк для заполнения инпута
 const onInputCallback = (event) => {
   const inputElem = event.target;
   if (inputElem.validity.valueMissing) {
@@ -75,85 +102,27 @@ const form = new Form([
 ]);
 
 form._setHandlers();
-// form.clearHandlers();
 
-// создание карточки
-class NewsCard {
-  createCard(link, image, date, title, text, label) {
-    const card = document.createElement('div'); // карточка
-    card.classList.add('card');
+const newsCard = new NewsCard();
+const newsCardList = new NewsCardList(cards);
+const newsApi = new NewsApi(SERVER_URL, API_KEY);
 
-    const cardLink = document.createElement('a'); // контейнер, ссылка
-    cardLink.classList.add('card__link');
-    cardLink.setAttribute('href',`${link}`);
-    cardLink.setAttribute('target','_blank');
-
-    const cardImage = document.createElement('img'); // картинка
-    cardImage.classList.add('card__image');
-    cardImage.classList.add('style', `background-image: url('${image}')`)
-    cardImage.setAttribute('alt', `Изображение из статьи`);
-
-    const cardDate = calculateDate(date); // дата
-
-    const cardDescription = document.createElement('div'); // текстовый блок
-    cardDescription.classList.add('card__description');
-
-    const cardTitle = document.createElement('h3'); // заголовок
-    cardTitle.classList.add('card__title');
-    cardTitle.textContent = title;
-
-    const cardText = document.createElement('p'); // текст
-    cardText.classList.add('card__text');
-    cardText.textContent = text;
-
-    const cardLabel = document.createElement('p'); // источник
-    cardLabel.classList.add('card__label');
-    cardLabel.textContent = label;
-
-    card.appendChild(cardLink);
-    cardLink.appendChild(cardImage);
-    cardLink.appendChild(cardDate);
-    cardLink.appendChild(cardDescription);
-    cardDescription.appendChild(cardTitle);
-    cardDescription.appendChild(cardText);
-    cardDescription.appendChild(cardLabel);
-
-    return card;
+function checkRes(data) {
+  if (data === 0) {
+    results.setAttribute('style', 'display: none');
+    notFound.setAttribute('style', 'display: flex');
+  } else {
+    notFound.setAttribute('style', 'display: none');
+    results.setAttribute('style', 'display: flex');
+    newsCardList.renderCards(data, newsCard);
   }
 }
 
-class NewsCardList {
-  constructor(list){
-    this.list = list;
-    this.cardsInPage = 3;
-    this.lastCard = 0;
-  }
+// отрисовка карточек по последнему запросу при перезагрузке страницы
+if (dataStorage.getRequest !== null) {
+  inputElem.value = dataStorage.getRequest();
+  const cardsFromStorage = dataStorage.getArray();
+  searchingResults.setAttribute('style', 'display: flex');
+  results.setAttribute('style', 'display: flex');
+  checkRes(cardsFromStorage);
 }
-
-// функция вычисления даты
-function calculateDate(date) {
-  const cardDate = document.createElement('time');
-  // cardDate.classList.add('card__date');
-  cardDate.setAttribute('datetime', date);
-  let dateInfo = new Date(date);
-  cardDate.textContent = dateInfo.getDate() + ' ' + monthArray[dateInfo.getMonth()] + ', ' + dateInfo.getFullYear();
- 
-  return cardDate;
-}
-
-const createCard = new NewsCard();
-console.log(createCard)
-
-// ньюс апи
-var url = 'http://newsapi.org/v2/everything?' +
-          'q=Apple&' +
-          'from=2020-06-27&' +
-          'sortBy=popularity&' +
-          'apiKey=772313d1aa0e42c39e8d202c20282aea';
-
-var req = new Request(url);
-
-fetch(req)
-  .then(function(response) {
-      console.log(response.json());
-  });

@@ -13,15 +13,22 @@
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (min-width: 900px) and (max-width: 1023px) {
   .cards {
     max-width: 688px;
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 801px) and (max-width: 899px) {
   .cards {
     max-width: 461px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 800px) {
+  .cards {
+    width: 100%;
   }
 }
 

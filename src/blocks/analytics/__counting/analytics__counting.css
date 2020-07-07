@@ -1,10 +1,10 @@
-@import url('./_monday/analytics__counting_monday.css');
-@import url('./_tuesday/analytics__counting_tuesday.css');
-@import url('./_wednesday/analytics__counting_wednesday.css');
-@import url('./_thursday/analytics__counting_thursday.css');
-@import url('./_friday/analytics__counting_friday.css');
-@import url('./_saturday/analytics__counting_saturday.css');
-@import url('./_sunday/analytics__counting_sunday.css');
+@import url('./_1/analytics__counting_1.css');
+@import url('./_2/analytics__counting_2.css');
+@import url('./_3/analytics__counting_3.css');
+@import url('./_4/analytics__counting_4.css');
+@import url('./_5/analytics__counting_5.css');
+@import url('./_6/analytics__counting_6.css');
+@import url('./_7/analytics__counting_7.css');
 
 .analytics__counting {
   height: 24px;

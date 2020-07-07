@@ -9,12 +9,12 @@ const isDev = process.env.NODE_ENV === 'development';
 module.exports = {
   entry: { 
     index: './src/index.js',
-    about: './src/scripts/about.js',
-    analytics: './src/scripts/analytics.js'
+    about: './src/about/index.js',
+    analytics: './src/analytics/index.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: './scripts/[name].[chunkhash].js'
+    filename: './[name].[chunkhash].js'
   },
   module: {
     rules: [
