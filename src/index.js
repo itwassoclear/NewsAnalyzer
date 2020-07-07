@@ -108,7 +108,7 @@ const newsCardList = new NewsCardList(cards);
 const newsApi = new NewsApi(SERVER_URL, API_KEY);
 
 function checkRes(data) {
-  if (data === 0) {
+  if (data == 0) {
     results.setAttribute('style', 'display: none');
     notFound.setAttribute('style', 'display: flex');
   } else {
@@ -119,7 +119,9 @@ function checkRes(data) {
 }
 
 // отрисовка карточек по последнему запросу при перезагрузке страницы
-if (dataStorage.getRequest !== null) {
+if (dataStorage.getArray() === null) {
+  searchingResults.setAttribute('style', 'display: none');
+} else {
   inputElem.value = dataStorage.getRequest();
   const cardsFromStorage = dataStorage.getArray();
   searchingResults.setAttribute('style', 'display: flex');

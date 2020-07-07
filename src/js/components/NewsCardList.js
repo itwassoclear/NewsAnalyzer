@@ -1,4 +1,4 @@
-import {showMore} from '../constants/constants.js';
+import {showMore} from "../constants/constants.js";
 
 // создание кардлиста карточек новостей
 export default class NewsCardList {
@@ -10,12 +10,15 @@ export default class NewsCardList {
   // рендер карточек
   renderCards(data, card) {
     const news = data;
-    for (let i = this.lastCardIndex; i < Math.min(this.lastCardIndex + this.cardsInPage, news.length); i++) {
-      const article = news[i];
-      this.cards.appendChild(card.createCard(article.url, article.urlToImage, article.publishedAt, article.title, article.description, article.source.name));
+    if (data) {
+      for (let i = this.lastCardIndex; i < Math.min(this.lastCardIndex + this.cardsInPage, news.length); i++) {
+        const article = news[i];
+        this.cards.appendChild(card.createCard(article.url, article.urlToImage, article.publishedAt, article.title, article.description, article.source.name,
+        ));
+      }
+      this.lastCardIndex = this.lastCardIndex + this.cardsInPage;
+      this.showCards(data, card);
     }
-    this.lastCardIndex = this.lastCardIndex + this.cardsInPage;
-    this.showCards(data, card);
   }
   // показывает ещё 3 карточки после нажатия на кнопку Показать ещё
   showCards(data, card) {

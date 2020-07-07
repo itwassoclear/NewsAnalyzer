@@ -13,7 +13,11 @@ export default class NewsCard {
 
     const cardImage = document.createElement('img'); // картинка
     cardImage.classList.add('card__image');
-    cardImage.src = image;
+    if (image) {
+      cardImage.src = image;
+    } else {
+      cardImage.src = 'https://via.placeholder.com/840x500.png?text=Sorry,+this+article+has+no+image';
+    }
     cardImage.setAttribute('alt', `Изображение из статьи`);
 
     const cardDate = calculateDate(date); // дата
