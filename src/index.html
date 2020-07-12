@@ -31,10 +31,11 @@
       <section class="search">
         <h1 class="search__title">Что в мире творится?</h1>
         <p class="search__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
-        <form class="search__inspect">
-          <input type="text" placeholder="Введите тему новости" class="search__input" required minlength="2">
-          <button class="search__button">Искать</button>
+        <form class="search__form">
+          <input type="text" placeholder="Введите тему новости" class="search__input" minlength="2" maxlength="30" required>
+          <button type="submit" class="search__button" disabled>Искать</button>
         </form>
+        <span class="search__error-message"></span>
       </section>
 
     </div>
@@ -54,6 +55,12 @@
           <p class="not-found__text">К сожалению по вашему запросу ничего не найдено.</p>
         </div>
 
+        <div class="server-error">
+          <img class="not-found__image" src="<%=require('./img/not-found.svg')%>" alt="Ничего не найдено">
+          <h3 class="not-found__title">Произошла ошибка</h3>
+          <p class="not-found__text">Пожалуйста, попробуйте повторить запрос позднее.</p>
+        </div>
+
         <div class="results">
           <div class="results__block">
             <h2 class="results__title">Результаты поиска</h2>
@@ -61,7 +68,7 @@
           </div>
 
           <div class="cards">
-            <div class="card">
+            <!-- <div class="card">
               <a class="card__link" href="https://lenta.ru" target="_blank">
                 <img src="<%=require('./img/cards/image_08.png')%>" class="card__image" alt="Изображение из статьи">
                 <time datetime="2019-08-02" class="card__date">2 августа 2019</time>
@@ -131,10 +138,14 @@
                   <p class="card__label">Медиазона</p>
                 </div>
               </a>
-            </div>
-          </div>
+            </div> -->
+          </div> 
   
           <button class="results__button">Показать еще</button>
+          <div class="preloader">
+            <i class="preloader__image"></i>
+            <p class="preloader__text">Идет поиск новостей...</p>
+          </div>
           <!-- прелоадер -->
         </div>
 

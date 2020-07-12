@@ -1,4 +1,4 @@
-.search__inspect {
+.search__form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -6,13 +6,13 @@
 }
 
 @media screen and (max-width: 800px) {
-  .search__inspect {
+  .search__form {
     max-width: 448px;
   }
 }
 
 @media screen and (max-width: 460px) {
-  .search__inspect {
+  .search__form {
     display: inline;
   }
 }

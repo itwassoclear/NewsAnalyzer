@@ -1,8 +1,9 @@
 @import url('./__button/search__button.css');
 @import url('./__input/search__input.css');
-@import url('./__inspect/search__inspect.css');
+@import url('./__form/search__form.css');
 @import url('./__text/search__text.css');
 @import url('./__title/search__title.css');
+@import url('./__error-message/search__error-message.css');
 
 .search {
   max-width: 608px;

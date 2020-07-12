@@ -1,0 +1,6 @@
+/* ошибка сервера */
+.server-error {
+  /* display: flex; */
+  flex-direction: column;
+  display: none;
+}

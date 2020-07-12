@@ -1,5 +1,6 @@
 .card__image {
   width: 400px;
+  height: 272px;
   border-radius: 10px 10px 0 0;
   background-size: contain;
   background-repeat: no-repeat;
@@ -8,6 +9,7 @@
 @media screen and (max-width: 1023px) {
   .card__image {
     width: 224px;
+    height: 150px;
     background-size: cover;
   }
 }
@@ -15,5 +17,6 @@
 @media screen and (max-width: 540px) {
   .card__image {
     width: 288px;
+    height: 196px;
   }
 }
