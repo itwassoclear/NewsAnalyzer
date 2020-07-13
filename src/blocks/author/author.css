@@ -2,6 +2,7 @@
 @import url('./__photo/author__photo.css');
 @import url('./__text/author__text.css');
 @import url('./__title/author__title.css');
+@import url('./__link/author__link.css');
 
 .author {
   padding: 80px 104px;
