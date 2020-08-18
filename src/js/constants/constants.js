@@ -1,4 +1,4 @@
-export const SERVER_URL = NODE_ENV === 'development' ? 'http://newsapi.org/v2/everything?' : 'https://praktikum.tk/news/v2/everything?';
+export const SERVER_URL = NODE_ENV === 'development' ? 'http://newsapi.org/v2/everything?' : 'https://nomoreparties.co/news/v2/everything?';
 export const API_KEY = '772313d1aa0e42c39e8d202c20282aea'; // ключ newsApi
 export const MONTH_ARRAY = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
 export const MS_IN_DAY = 8.64e+7; // количество милисекунд в одном дне
