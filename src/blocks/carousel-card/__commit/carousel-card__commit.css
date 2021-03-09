@@ -7,4 +7,10 @@
   font-size: 16px;
   line-height: 22px;
   color: #1A1B22;
+  overflow: hidden;
+  /* white-space: pre-line; */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 }
